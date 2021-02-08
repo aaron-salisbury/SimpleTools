@@ -1,0 +1,147 @@
+﻿<Page
+    x:Class="SimpleTools.App.Views.DiceRollerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="{StaticResource MediumLeftTopRightBottomMargin}" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+            Text="Dice Roller"
+            FontFamily="ms-appx:///Assets/Fonts/DnDC.ttf#DnDC"
+            HorizontalAlignment="Center" 
+            FontSize="69"
+            Margin="0,0,0,16"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Dice" Margin="0,0,0,4" />
+                <ListView 
+                    x:Name="DiceListView" 
+                    ItemsSource="{Binding DiceRoller.Dice}" 
+                    SelectedItem="{Binding SelectedDie}"
+                    SelectionChanged="DiceListView_OnSelectionChanged"
+                    HorizontalAlignment="Left"
+                    Width="285"
+                    Height="320"
+                    BorderThickness="1" 
+                    CornerRadius="1.5"
+                    BorderBrush="{ThemeResource TextBoxBorderThemeBrush}" 
+                    Background="DarkGray"
+                    Margin="0,0,0,8">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid HorizontalAlignment="Left">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="110" />
+                                    <ColumnDefinition Width="80" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.Column="0"
+                                        Tag="DieImage"
+                                        Width="32"
+                                        Height="32"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Source="/Assets/Icons/generic-dice-icon.png"
+                                        Rotation="0">
+                                    <Image.RotationTransition>
+                                        <ScalarTransition />
+                                    </Image.RotationTransition>
+                                </Image>
+
+                                <TextBlock Grid.Column="1"
+                                        Margin="10"
+                                        VerticalAlignment="Center"
+                                        Foreground="White"
+                                        Text="{Binding Description}" />
+
+                                <TextBlock Grid.Column="2"
+                                        Text="{Binding ResultDescription}" 
+                                        VerticalAlignment="Center" 
+                                        Foreground="White" 
+                                        FontWeight="Bold" />
+
+                                <Button Grid.Column="3"
+                                    Background="Transparent"
+                                    Click="BtnDelete_OnClick">
+                                    <SymbolIcon Symbol="Delete" Foreground="White" />
+                                </Button>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Vertical">
+            <TextBlock Text="Roll Settings" Margin="0,0,0,4" />
+
+            <ToggleSwitch Name="SoundToggle" OffContent="No Sound" OnContent="Sound" IsOn="False" Margin="0,0,0,24" />
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,24">
+                <TextBox 
+                    Name="ModifierTextBox"
+                    Header="Modifier"
+                    Width="125" 
+                    Text="{Binding DiceRoller.Modifier, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    VerticalAlignment="Bottom" 
+                    BeforeTextChanging="ModifierTextBox_OnBeforeTextChanging" />
+
+                <ComboBox 
+                    Header="Multiplier Type"
+                    Width="150" 
+                    ItemsSource="{Binding MultiplierTypes, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                    SelectedItem="{Binding MultiplierType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    SelectedValuePath="Value" 
+                    DisplayMemberPath="Text"
+                    Margin="10,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                <TextBlock Text="Notation" Margin="0,0,0,3" />
+                <Border BorderThickness=".8" BorderBrush="{ThemeResource TextBoxBorderThemeBrush}" CornerRadius="2.5" Padding="6.5" Width="284" MaxHeight="81">
+                    <TextBlock Text="{Binding DiceRoller.Notation}" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" />
+                </Border>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,8">
+            <Slider 
+                    Header="{Binding NewDieHeader, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                    Width="210"
+                    Minimum="2" Maximum="144" 
+                    Value="{Binding NewDieSides, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" />
+
+            <Button Content="Add Die" HorizontalAlignment="Left" Command="{Binding AddDieCommand}" Margin="10,0,0,0" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,8">
+            <TextBox Header="Result" Text="{Binding DiceRoller.Result}" IsReadOnly="True" Width="100" Margin="0,-23,15,0" VerticalAlignment="Center" />
+            
+            <Button Content="Roll" 
+                Click="BtnRoll_OnClick" 
+                Command="{Binding RollTaskCommand}"
+                Width="65"
+                    IsEnabled="{Binding IsDiceRollerValid, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        
+    </Grid>
+</Page>

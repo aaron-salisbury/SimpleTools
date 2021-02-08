@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="SimpleTools.App.Views.DevToolsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls">
+
+    <winui:NavigationView 
+        x:Name="NavView" 
+        IsBackButtonVisible="Collapsed" 
+        IsBackEnabled="False"
+        IsSettingsVisible="False" 
+        Background="{ThemeResource SystemControlBackgroundAltHighBrush}"
+        PaneDisplayMode="Top"
+        IsPaneToggleButtonVisible="False"
+        Loaded="NavView_Loaded"
+        ItemInvoked="NavView_ItemInvoked">
+
+        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+            <Frame x:Name="ContentFrame" Padding="12,0,12,12" IsTabStop="True" />
+        </ScrollViewer>
+    </winui:NavigationView>
+</Page>

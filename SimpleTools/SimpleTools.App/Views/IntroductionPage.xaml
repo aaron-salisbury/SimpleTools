@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="SimpleTools.App.Views.IntroductionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <StackPanel Margin="{StaticResource SmallLeftRightMargin}">
+            <TextBlock Text="{Binding AppDisplayName, Mode=OneWay}" Style="{StaticResource HeadingTextStyle}" TextWrapping="WrapWholeWords" Margin="0,0,0,10" />
+            <TextBlock x:Uid="Settings_AboutDescription" Style="{StaticResource BodyTextBlockStyle}" TextWrapping="WrapWholeWords" Margin="0,0,0,20" />
+
+            <TextBlock Style="{StaticResource HeadingTextStyle}" TextWrapping="WrapWholeWords" Margin="0,0,0,10">
+                Application Website
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" TextWrapping="WrapWholeWords" Margin="0,0,0,20">
+                <Span xml:space="preserve">Simple Tools is an open-source project hosted on <Hyperlink NavigateUri="https://github.com/aaron-salisbury/SimpleTools">GitHub</Hyperlink>.</Span>
+            </TextBlock>
+
+            <TextBlock Style="{StaticResource HeadingTextStyle}" TextWrapping="WrapWholeWords" Margin="0,0,0,10">
+                Use
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" TextWrapping="WrapWholeWords" Margin="0,0,0,20">
+                <Span xml:space="preserve">Simple Tools is released under <Hyperlink NavigateUri="https://github.com/aaron-salisbury/SimpleTools/blob/master/LICENSE">The MIT License</Hyperlink>.</Span>
+            </TextBlock>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

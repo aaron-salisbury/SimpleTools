@@ -1,0 +1,85 @@
+﻿<Page
+    x:Class="SimpleTools.App.Views.MinecraftNetherCalculatorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style x:Key="SubtitleTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="36" />
+            <Setter Property="FontFamily" Value="ms-appx:///Assets/Fonts/Minecrafter.Alt.ttf#Minecrafter Alt" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="0,0,0,8" />
+        </Style>
+        <Style x:Key="CoordLabelTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="ms-appx:///Assets/Fonts/Minecrafter.Alt.ttf#Minecrafter Alt" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+        <Style x:Key="CoordTextBoxStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="FontFamily" Value="ms-appx:///Assets/Fonts/Minecrafter.Alt.ttf#Minecrafter Alt" />
+            <Setter Property="Width" Value="175" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="3,0,0,0" />
+        </Style>
+    </Page.Resources>
+
+
+    <!-- Basically a clone of https://nethercalculator.com/ -->
+    
+    <StackPanel MinWidth="200" Margin="{StaticResource MediumLeftTopRightBottomMargin}">
+        <TextBlock Text="NETHER PORTaL CaLCULaTOR" 
+                   FontFamily="ms-appx:///Assets/Fonts/Minecrafter.Alt.ttf#Minecrafter Alt" 
+                   HorizontalAlignment="Center" 
+                   TextAlignment="Center" 
+                   FontSize="48" 
+                   TextWrapping="Wrap"
+                   Width="450" 
+                   Margin="0,12,0,128" />
+
+        <TextBlock Text="OVERWORLD" Style="{StaticResource SubtitleTextBlockStyle}" />
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,64" HorizontalAlignment="Center">
+            <TextBlock Text= "X"  Style="{StaticResource CoordLabelTextBlockStyle}" />
+            <TextBox Name="OverworldX" 
+                     Text="{Binding MinecraftNetherCalculator.OverworldX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                     Style="{StaticResource CoordTextBoxStyle}" 
+                     BeforeTextChanging="TextBox_OnBeforeTextChanging" />
+
+            <TextBlock Text= "Y"  Style="{StaticResource CoordLabelTextBlockStyle}" Margin="24,0,0,0" />
+            <TextBox Name="OverworldY" 
+                     Text="{Binding MinecraftNetherCalculator.OverworldY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                     Style="{StaticResource CoordTextBoxStyle}" 
+                     BeforeTextChanging="TextBox_OnBeforeTextChanging" />
+
+            <TextBlock Text= "Z"  Style="{StaticResource CoordLabelTextBlockStyle}" Margin="24,0,0,0" />
+            <TextBox Name="OverworldZ" 
+                     Text="{Binding MinecraftNetherCalculator.OverworldZ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                     Style="{StaticResource CoordTextBoxStyle}" 
+                     BeforeTextChanging="TextBox_OnBeforeTextChanging" />
+        </StackPanel>
+
+        <TextBlock Text="NETHER" Style="{StaticResource SubtitleTextBlockStyle}" />
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,32" HorizontalAlignment="Center">
+            <TextBlock Text= "X"  Style="{StaticResource CoordLabelTextBlockStyle}" />
+            <TextBox Name="NetherX" 
+                     Text="{Binding MinecraftNetherCalculator.NetherX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                     Style="{StaticResource CoordTextBoxStyle}" 
+                     BeforeTextChanging="TextBox_OnBeforeTextChanging" />
+
+            <TextBlock Text= "Y"  Style="{StaticResource CoordLabelTextBlockStyle}" Margin="24,0,0,0" />
+            <TextBox Name="NetherY" 
+                     Text="{Binding MinecraftNetherCalculator.NetherY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                     Style="{StaticResource CoordTextBoxStyle}" 
+                     BeforeTextChanging="TextBox_OnBeforeTextChanging" />
+
+            <TextBlock Text= "Z"  Style="{StaticResource CoordLabelTextBlockStyle}" Margin="24,0,0,0" />
+            <TextBox Name="NetherZ" 
+                     Text="{Binding MinecraftNetherCalculator.NetherZ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                     Style="{StaticResource CoordTextBoxStyle}" 
+                     BeforeTextChanging="TextBox_OnBeforeTextChanging" />
+        </StackPanel>
+    </StackPanel>
+</Page>

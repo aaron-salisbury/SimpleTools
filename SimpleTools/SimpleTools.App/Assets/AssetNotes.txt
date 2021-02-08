@@ -1,0 +1,29 @@
+﻿    How to generate assets:
+https://www.c-sharpcorner.com/article/how-to-add-splash-screen-and-app-icon-in-uwp-project/
+
+    Icon: 
+https://www.iconarchive.com/show/button-ui-system-folders-drives-icons-by-blackvariant/Utilities-icon.html
+
+    Large PNG: 
+https://www.pngitem.com/middle/hxowoxm_utilities-icon-icon-hd-png-download/
+
+    Manually created splash image using:
+https://pixlr.com/x/
+
+    Title Bar Font:
+https://www.1001freefonts.com/kitchen-home.font
+
+    Page Title Font:
+https://www.fontsquirrel.com/fonts/archistico
+
+    Dice Roller Font:
+https://famfonts.com/dungeons-and-dragons/
+
+    Minecraft Font:
+https://www.dafont.com/minecrafter.font
+
+    Dice Icon:
+https://www.flaticon.com/free-icon/dice_633853?term=dice&page=1&position=27&related_item_id=633853
+
+    Dice Roll Sound:
+https://freesound.org/people/AbdrTar/sounds/519419/
