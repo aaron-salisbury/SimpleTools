@@ -2,7 +2,6 @@
 using SimpleTools.Core.Base;
 using SimpleTools.Core.Domains.ToDoListManager;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
