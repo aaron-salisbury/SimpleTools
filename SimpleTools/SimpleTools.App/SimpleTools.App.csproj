@@ -145,6 +145,7 @@
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\LogViewModel.cs" />
     <Compile Include="ViewModels\IntroductionViewModel.cs" />
+    <Compile Include="ViewModels\Tools\Finance\BudgetViewModel.cs" />
     <Compile Include="ViewModels\Tools\ToDoListViewModel.cs" />
     <Compile Include="ViewModels\Tools\Dev\FlatUIColorPickerViewModel.cs" />
     <Compile Include="ViewModels\Tools\Dev\LineSorterViewModel.cs" />
@@ -153,7 +154,6 @@
     <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\BaseNavigableViewModel.cs" />
-    <Compile Include="ViewModels\Tools\Finance\FinanceToolsViewModel.cs" />
     <Compile Include="ViewModels\Tools\Game\GameToolsViewModel.cs" />
     <Compile Include="ViewModels\Tools\Game\DiceRollerViewModel.cs" />
     <Compile Include="ViewModels\Tools\Game\MinecraftNetherCalculatorViewModel.cs" />
@@ -164,6 +164,9 @@
     </Compile>
     <Compile Include="Views\LogPage.xaml.cs">
       <DependentUpon>LogPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tools\Finance\BudgetPage.xaml.cs">
+      <DependentUpon>BudgetPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Tools\ToDoListPage.xaml.cs">
       <DependentUpon>ToDoListPage.xaml</DependentUpon>
@@ -182,9 +185,6 @@
     </Compile>
     <Compile Include="Views\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Tools\Finance\FinanceToolsPage.xaml.cs">
-      <DependentUpon>FinanceToolsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Tools\Game\GameToolsPage.xaml.cs">
       <DependentUpon>GameToolsPage.xaml</DependentUpon>
@@ -254,6 +254,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Tools\Finance\BudgetPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Tools\ToDoListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -277,10 +281,6 @@
     <Page Include="Views\SettingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Tools\Finance\FinanceToolsPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Tools\Game\GameToolsPage.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -31,7 +31,7 @@ namespace SimpleTools.App.ViewModels
             Register<MinecraftSeedMapViewModel, MinecraftSeedMapPage>();
 
             // *** Finance Tools ***
-            Register<FinanceToolsViewModel, FinanceToolsPage>();
+            Register<BudgetViewModel, BudgetPage>();
 
             // *** Other Tools ***
             Register<ToDoListViewModel, ToDoListPage>();
@@ -56,7 +56,7 @@ namespace SimpleTools.App.ViewModels
         public MinecraftSeedMapViewModel MinecraftSeedMapViewModel => SimpleIoc.Default.GetInstance<MinecraftSeedMapViewModel>();
 
         // *** Finance Tools ***
-        public FinanceToolsViewModel FinanceToolsViewModel => SimpleIoc.Default.GetInstance<FinanceToolsViewModel>();
+        public BudgetViewModel BudgetViewModel => SimpleIoc.Default.GetInstance<BudgetViewModel>();
 
         // *** Other Tools ***
         public ToDoListViewModel ToDoListViewModel => SimpleIoc.Default.GetInstance<ToDoListViewModel>();

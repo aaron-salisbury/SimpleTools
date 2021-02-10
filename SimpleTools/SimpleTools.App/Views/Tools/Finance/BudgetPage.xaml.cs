@@ -3,14 +3,14 @@ using Windows.UI.Xaml.Controls;
 
 namespace SimpleTools.App.Views
 {
-    public sealed partial class FinanceToolsPage : Page
+    public sealed partial class BudgetPage : Page
     {
-        private FinanceToolsViewModel ViewModel
+        private BudgetViewModel ViewModel
         {
-            get => ViewModelLocator.Current.FinanceToolsViewModel;
+            get => ViewModelLocator.Current.BudgetViewModel;
         }
 
-        public FinanceToolsPage()
+        public BudgetPage()
         {
             InitializeComponent();
             DataContext = ViewModel;
