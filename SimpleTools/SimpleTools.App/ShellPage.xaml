@@ -32,15 +32,15 @@
                        Foreground="White" />
         </Grid>
         
-        <winui:NavigationView Grid.Row="1"
-                            x:Name="navigationView"
-                            IsBackButtonVisible="Visible"
-                            IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}"
-                            SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
-                            IsSettingsVisible="True"
-                            Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
+        <winui:NavigationView 
+            Grid.Row="1"
+            x:Name="navigationView"
+            IsBackButtonVisible="Collapsed"
+            IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}"
+            SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
+            IsSettingsVisible="True"
+            Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
 
-            
             <!-- Icons: https://docs.microsoft.com/windows/uwp/style/segoe-ui-symbol-font -->
             <winui:NavigationView.MenuItems>
 
