@@ -60,14 +60,6 @@
                     </winui:NavigationViewItem.Icon>
                 </winui:NavigationViewItem>
 
-                
-            <winui:NavigationViewItem Content="Finance Tools" helpers:NavHelper.NavigateTo="SimpleTools.App.ViewModels.BudgetViewModel">
-                <winui:NavigationViewItem.Icon>
-                    <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE825;"/>
-                </winui:NavigationViewItem.Icon>
-            </winui:NavigationViewItem>
-    
-
                 <winui:NavigationViewItem Content="To Do List" helpers:NavHelper.NavigateTo="SimpleTools.App.ViewModels.ToDoListViewModel">
                     <winui:NavigationViewItem.Icon>
                         <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE9D5;"/>

@@ -30,9 +30,6 @@ namespace SimpleTools.App.ViewModels
             Register<MinecraftNetherCalculatorViewModel, MinecraftNetherCalculatorPage>();
             Register<MinecraftSeedMapViewModel, MinecraftSeedMapPage>();
 
-            // *** Finance Tools ***
-            Register<BudgetViewModel, BudgetPage>();
-
             // *** Other Tools ***
             Register<ToDoListViewModel, ToDoListPage>();
         }
@@ -54,9 +51,6 @@ namespace SimpleTools.App.ViewModels
         public DiceRollerViewModel DiceRollerViewModel => SimpleIoc.Default.GetInstance<DiceRollerViewModel>();
         public MinecraftNetherCalculatorViewModel MinecraftNetherCalculatorViewModel => SimpleIoc.Default.GetInstance<MinecraftNetherCalculatorViewModel>();
         public MinecraftSeedMapViewModel MinecraftSeedMapViewModel => SimpleIoc.Default.GetInstance<MinecraftSeedMapViewModel>();
-
-        // *** Finance Tools ***
-        public BudgetViewModel BudgetViewModel => SimpleIoc.Default.GetInstance<BudgetViewModel>();
 
         // *** Other Tools ***
         public ToDoListViewModel ToDoListViewModel => SimpleIoc.Default.GetInstance<ToDoListViewModel>();
