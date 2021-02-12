@@ -50,7 +50,7 @@
 
                 <winui:NavigationViewItem Content="Dev Tools" helpers:NavHelper.NavigateTo="SimpleTools.App.ViewModels.DevToolsViewModel">
                     <winui:NavigationViewItem.Icon>
-                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE90F;"/>
+                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xEC7A;"/>
                     </winui:NavigationViewItem.Icon>
                 </winui:NavigationViewItem>
 
@@ -62,13 +62,13 @@
 
                 <winui:NavigationViewItem Content="To Do List" helpers:NavHelper.NavigateTo="SimpleTools.App.ViewModels.ToDoListViewModel">
                     <winui:NavigationViewItem.Icon>
-                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE9D5;"/>
+                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE71D;"/>
                     </winui:NavigationViewItem.Icon>
                 </winui:NavigationViewItem>
 
                 <winui:NavigationViewItem Content="Log" helpers:NavHelper.NavigateTo="SimpleTools.App.ViewModels.LogViewModel" Visibility="{Binding IsDebug}">
                     <winui:NavigationViewItem.Icon>
-                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE8FD;"/>
+                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xF0E3;"/>
                     </winui:NavigationViewItem.Icon>
                 </winui:NavigationViewItem>
 
