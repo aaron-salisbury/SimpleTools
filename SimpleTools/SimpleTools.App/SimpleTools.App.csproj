@@ -145,6 +145,8 @@
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\LogViewModel.cs" />
     <Compile Include="ViewModels\IntroductionViewModel.cs" />
+    <Compile Include="ViewModels\Tools\Web\WebToolsViewModel.cs" />
+    <Compile Include="ViewModels\Tools\Web\YouTubeTimestampLinkerViewModel.cs" />
     <Compile Include="ViewModels\Tools\ToDoListViewModel.cs" />
     <Compile Include="ViewModels\Tools\Dev\FlatUIColorPickerViewModel.cs" />
     <Compile Include="ViewModels\Tools\Dev\LineSorterViewModel.cs" />
@@ -193,6 +195,12 @@
     </Compile>
     <Compile Include="Views\Tools\Game\MinecraftNetherCalculatorPage.xaml.cs">
       <DependentUpon>MinecraftNetherCalculatorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tools\Web\WebToolsPage.xaml.cs">
+      <DependentUpon>WebToolsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tools\Web\YouTubeTimestampLinkerPage.xaml.cs">
+      <DependentUpon>YouTubeTimestampLinkerPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -290,6 +298,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\Tools\Web\WebToolsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Tools\Web\YouTubeTimestampLinkerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
@@ -328,6 +344,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Fonts\Archistico_Simple.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\league-gothic-regular.ttf" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

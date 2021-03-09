@@ -30,6 +30,10 @@ namespace SimpleTools.App.ViewModels
             Register<MinecraftNetherCalculatorViewModel, MinecraftNetherCalculatorPage>();
             Register<MinecraftSeedMapViewModel, MinecraftSeedMapPage>();
 
+            // *** Web Tools ***
+            Register<WebToolsViewModel, WebToolsPage>();
+            Register<YouTubeTimestampLinkerViewModel, YouTubeTimestampLinkerPage>();
+
             // *** Other Tools ***
             Register<ToDoListViewModel, ToDoListPage>();
         }
@@ -51,6 +55,10 @@ namespace SimpleTools.App.ViewModels
         public DiceRollerViewModel DiceRollerViewModel => SimpleIoc.Default.GetInstance<DiceRollerViewModel>();
         public MinecraftNetherCalculatorViewModel MinecraftNetherCalculatorViewModel => SimpleIoc.Default.GetInstance<MinecraftNetherCalculatorViewModel>();
         public MinecraftSeedMapViewModel MinecraftSeedMapViewModel => SimpleIoc.Default.GetInstance<MinecraftSeedMapViewModel>();
+
+        // *** Web Tools ***
+        public WebToolsViewModel WebToolsViewModel => SimpleIoc.Default.GetInstance<WebToolsViewModel>();
+        public YouTubeTimestampLinkerViewModel YouTubeTimestampLinkerViewModel => SimpleIoc.Default.GetInstance<YouTubeTimestampLinkerViewModel>();
 
         // *** Other Tools ***
         public ToDoListViewModel ToDoListViewModel => SimpleIoc.Default.GetInstance<ToDoListViewModel>();

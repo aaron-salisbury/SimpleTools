@@ -1,29 +1,23 @@
-﻿    How to generate assets:
-https://www.c-sharpcorner.com/article/how-to-add-splash-screen-and-app-icon-in-uwp-project/
+﻿    Logo "Utilities Icon" by Selina from PNGITEM
+    https://www.pngitem.com/middle/hxowoxm_utilities-icon-icon-hd-png-download/
 
-    Icon: 
-https://www.iconarchive.com/show/button-ui-system-folders-drives-icons-by-blackvariant/Utilities-icon.html
+    Title font "Kitchen Home Font" by AV Type from 1001 Free Fonts
+    https://www.1001freefonts.com/kitchen-home.font
 
-    Large PNG: 
-https://www.pngitem.com/middle/hxowoxm_utilities-icon-icon-hd-png-download/
+    Page heading font "Archistico" by Archistico from Font Squirrel
+    https://www.fontsquirrel.com/fonts/archistico
 
-    Manually created splash image using:
-https://pixlr.com/x/
+    YouTube font "League Gothic" by The League of Moveable Type from Social Fonts
+    http://social-fonts.com/youtube/league-gothic-regular/
 
-    Title Bar Font:
-https://www.1001freefonts.com/kitchen-home.font
+    Minecraft font "MineCrafter" by Madpixel Designs from dafont.com
+    https://www.dafont.com/minecrafter.font
 
-    Page Title Font:
-https://www.fontsquirrel.com/fonts/archistico
+    Dice Roller font "Dunggeons & Dragons" by zentron from Famous Fonts
+    https://famfonts.com/dungeons-and-dragons/
 
-    Dice Roller Font:
-https://famfonts.com/dungeons-and-dragons/
+    Dice icon "Dice" by Pixel perfect from Flaticon
+    https://www.flaticon.com/free-icon/dice_633853
 
-    Minecraft Font:
-https://www.dafont.com/minecrafter.font
-
-    Dice Icon:
-https://www.flaticon.com/free-icon/dice_633853
-
-    Dice Roll Sound:
-https://freesound.org/people/AbdrTar/sounds/519419/
+    Dice roll sound "Dice Sound" by AbdrTar from Freesound
+    https://freesound.org/people/AbdrTar/sounds/519419/
