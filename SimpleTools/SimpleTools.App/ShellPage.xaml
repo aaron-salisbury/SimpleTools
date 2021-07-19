@@ -67,11 +67,11 @@
                     </winui:NavigationViewItem.Icon>
                 </winui:NavigationViewItem>
 
-                <winui:NavigationViewItem Content="To Do List" helpers:NavHelper.NavigateTo="SimpleTools.App.ViewModels.ToDoListViewModel">
+                <!--<winui:NavigationViewItem Content="To Do List" helpers:NavHelper.NavigateTo="SimpleTools.App.ViewModels.ToDoListViewModel">
                     <winui:NavigationViewItem.Icon>
                         <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE71D;"/>
                     </winui:NavigationViewItem.Icon>
-                </winui:NavigationViewItem>
+                </winui:NavigationViewItem>-->
 
                 <winui:NavigationViewItem Content="Log" helpers:NavHelper.NavigateTo="SimpleTools.App.ViewModels.LogViewModel" Visibility="{Binding IsDebug}">
                     <winui:NavigationViewItem.Icon>
