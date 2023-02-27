@@ -29,9 +29,18 @@ namespace SimpleTools.Core.Tools.Web
 
                 for (int i = 0; i < Phrase.Length; i++)
                 {
-                    string letter = lastWasLowered ? Phrase[i].ToString().ToUpper() : Phrase[i].ToString().ToLower();
-                    translatedPhrase += letter;
-                    lastWasLowered = !lastWasLowered;
+                    string character = Phrase[i].ToString();
+
+                    if (string.IsNullOrWhiteSpace(character))
+                    {
+                        translatedPhrase += character;
+                    }
+                    else
+                    {
+                        string translatedLetter = lastWasLowered ? character.ToUpper() : character.ToLower();
+                        translatedPhrase += translatedLetter;
+                        lastWasLowered = !lastWasLowered;
+                    }
                 }
 
                 TranslatedPhrase = translatedPhrase;
