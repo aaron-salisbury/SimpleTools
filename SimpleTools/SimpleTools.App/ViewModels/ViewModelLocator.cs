@@ -33,6 +33,7 @@ namespace SimpleTools.App.ViewModels
             // *** Web Tools ***
             Register<WebToolsViewModel, WebToolsPage>();
             Register<YouTubeTimestampLinkerViewModel, YouTubeTimestampLinkerPage>();
+            Register<DummyTranslatorViewModel, DummyTranslatorPage>();
 
             // *** Other Tools ***
             Register<ToDoListViewModel, ToDoListPage>();
@@ -59,6 +60,7 @@ namespace SimpleTools.App.ViewModels
         // *** Web Tools ***
         public WebToolsViewModel WebToolsViewModel => SimpleIoc.Default.GetInstance<WebToolsViewModel>();
         public YouTubeTimestampLinkerViewModel YouTubeTimestampLinkerViewModel => SimpleIoc.Default.GetInstance<YouTubeTimestampLinkerViewModel>();
+        public DummyTranslatorViewModel DummyTranslatorViewModel => SimpleIoc.Default.GetInstance<DummyTranslatorViewModel>();
 
         // *** Other Tools ***
         public ToDoListViewModel ToDoListViewModel => SimpleIoc.Default.GetInstance<ToDoListViewModel>();

@@ -9,7 +9,8 @@ namespace SimpleTools.App.ViewModels
     {
         public readonly List<(string Content, Type Page)> ToolPages = new List<(string Content, Type Page)>
         {
-            ("YT Timestamp Linker", typeof(YouTubeTimestampLinkerPage))
+            ("YT Timestamp Linker", typeof(YouTubeTimestampLinkerPage)),
+            ("Dummy Translator", typeof(DummyTranslatorPage))
         };
     }
 }

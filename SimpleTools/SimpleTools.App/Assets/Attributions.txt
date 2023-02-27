@@ -10,6 +10,9 @@
     YouTube font "League Gothic" by The League of Moveable Type from Social Fonts.
     http://social-fonts.com/youtube/league-gothic-regular/
 
+    Dummy Translator font "ElliotSix" by Fonthead Design from Font Squirrel.
+    https://www.fontsquirrel.com/fonts/ElliotSix
+
     Minecraft font "MineCrafter" by Madpixel Designs from dafont.com.
     https://www.dafont.com/minecrafter.font
 

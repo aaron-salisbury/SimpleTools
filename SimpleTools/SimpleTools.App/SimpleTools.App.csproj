@@ -146,6 +146,7 @@
     <Compile Include="ViewModels\LogViewModel.cs" />
     <Compile Include="ViewModels\IntroductionViewModel.cs" />
     <Compile Include="ViewModels\Tools\Web\WebToolsViewModel.cs" />
+    <Compile Include="ViewModels\Tools\Web\DummyTranslatorViewModel.cs" />
     <Compile Include="ViewModels\Tools\Web\YouTubeTimestampLinkerViewModel.cs" />
     <Compile Include="ViewModels\Tools\ToDoListViewModel.cs" />
     <Compile Include="ViewModels\Tools\Dev\FlatUIColorPickerViewModel.cs" />
@@ -198,6 +199,9 @@
     </Compile>
     <Compile Include="Views\Tools\Web\WebToolsPage.xaml.cs">
       <DependentUpon>WebToolsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tools\Web\DummyTranslatorPage.xaml.cs">
+      <DependentUpon>DummyTranslatorPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Tools\Web\YouTubeTimestampLinkerPage.xaml.cs">
       <DependentUpon>YouTubeTimestampLinkerPage.xaml</DependentUpon>
@@ -316,6 +320,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\Tools\Web\DummyTranslatorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Tools\Web\YouTubeTimestampLinkerPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -361,6 +369,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Fonts\league-gothic-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\ElliotSix.ttf" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
